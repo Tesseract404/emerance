@@ -10,7 +10,7 @@ class _LoginPage extends State<LoginPage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Color(0xFF00072D),
+      backgroundColor: Color(0xFF00072D),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
@@ -24,9 +24,9 @@ class _LoginPage extends State<LoginPage>{
                       child: Container(
                         padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width*.07),
                         child: Image(
-                          alignment: Alignment.topCenter,
-                          height: MediaQuery.of(context).size.height*.5,
-                          width: MediaQuery.of(context).size.width*.5,
+                          alignment: Alignment.center,
+                          height: MediaQuery.of(context).size.height*.2,
+                          width: MediaQuery.of(context).size.width*.2,
                           image: AssetImage("assets/logo.png"),
                         ),
                       ),
@@ -47,35 +47,60 @@ class _LoginPage extends State<LoginPage>{
                     ),
                   ),
                 ),
-                Container(
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height*.04, horizontal: MediaQuery.of(context).size.width*.07),
-                  height: 45,
-                  child: TextField(
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      labelText: 'Email',
-                      labelStyle: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'PlayfairDisplay'
-                      ),
-                      focusedBorder: OutlineInputBorder(
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(1, 1, 1, 1),
+                  child: Container(
+                    alignment: Alignment.center,
+                    margin: EdgeInsets.symmetric(
+                        vertical: MediaQuery.of(context).size.height*.05,
+                        horizontal: MediaQuery.of(context).size.width*.07),
+                    height: 55,
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(80),
+                        ),
+                        labelText: 'Email',
+                        labelStyle: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'PlayfairDisplay'
+                        ),
+                        focusedBorder:
+                        OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(80),
+                        ),
                       ),
                     ),
                   ),
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: MediaQuery.of(context).size.height*.01, horizontal: MediaQuery.of(context).size.width*.07),
-                  height: 45,
-                  child: TextField(
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText:'Password',
-                      labelStyle: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontFamily: 'PlayfairDisplay'
+                Padding(
+                  padding:   EdgeInsets.fromLTRB(1, 1, 1, 1),
+                  child: Container(
+                    margin: EdgeInsets.symmetric(
+                        vertical: MediaQuery.of(context).size.height*.01,
+                        horizontal: MediaQuery.of(context).size.width*.07),
+                    height: 55,
+                    child: TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white,
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(80),
+                        ),
+                        labelText:'Password',
+                        labelStyle: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontFamily: 'PlayfairDisplay'
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(80),
+                        ),
+
                       ),
-                      focusedBorder: OutlineInputBorder(),
                     ),
                   ),
                 ),
@@ -92,7 +117,7 @@ class _LoginPage extends State<LoginPage>{
                           child: Text(
                             " Forgot Password?",
                             style: TextStyle(
-                              color: Color(0xFFFE484E),
+                              color: Color(0xFF1d66db),
                               fontFamily: 'PlayfairDisplay',
                               fontSize: 11,
                               fontWeight: FontWeight.w400,
@@ -109,11 +134,11 @@ class _LoginPage extends State<LoginPage>{
                 Container(
                   margin: EdgeInsets.all(25),
                   height: MediaQuery.of(context).size.height*.053,
-                  width: MediaQuery.of(context).size.width*.8,
+                  width: MediaQuery.of(context).size.width*.4,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
 
-                      color: Color(0xFFFE6D73)
+                      color: Color(0xFF1d66db)
                   ),
                   child: MaterialButton(
                     onPressed: () {
@@ -150,7 +175,7 @@ class _LoginPage extends State<LoginPage>{
                         child: Text(
                           " Join now",
                           style: TextStyle(
-                            color: Color(0xFFFE484E),
+                            color: Color(0xFF1d66db),
                             fontFamily: 'PlayfairDisplay',
                             fontSize: 11,
                             fontWeight: FontWeight.w400,

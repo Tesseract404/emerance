@@ -13,7 +13,7 @@ void main() {
         '/login' : (context) => LoginPage(),
         '/signup' : (context) =>   SignUpPage(),
       },
-      initialRoute: '/login',
+      initialRoute: '/',
     )
   );
 }
