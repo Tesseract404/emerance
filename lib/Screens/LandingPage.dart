@@ -14,13 +14,18 @@ class _LandingPage extends State<LandingPage>{
     //   )
     // ),
     return Scaffold(
-      body: SingleChildScrollView(
+      body: SafeArea(
         child: Container(
-          height: MediaQuery.of(context).size.height,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image:AssetImage('assets/bgphoto.png'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          height: 900,
+          width: 500,
           child: SafeArea(
             child: Container(
-                decoration: BoxDecoration(
-                    color: Colors.white, borderRadius: BorderRadius.circular(30)),
                 child: Padding(
                   padding: EdgeInsets.all(80),
                   child: Column(
@@ -29,13 +34,14 @@ class _LandingPage extends State<LandingPage>{
                         child: Container(),flex: 1,),
                       Expanded(
                         child: Container(
-                          height: MediaQuery.of(context).size.height*2,
-                          width: MediaQuery.of(context).size.width*2,
                           child: Image(
                             image: AssetImage(
                                 "assets/logo.png"),
                           ),
+                          height: 100 ,
+                          width: 100,
                         ),
+
                         flex: 1,
                       ),
                       Container(),
@@ -49,9 +55,9 @@ class _LandingPage extends State<LandingPage>{
                                 'Welcome To',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
-                                  color: Colors.black,
+                                  color: Colors.white,
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 27,
+                                  fontSize: 38,
                                   fontFamily: 'PLayfairDisplay',
                                 ),
                               ),),
@@ -62,35 +68,39 @@ class _LandingPage extends State<LandingPage>{
                                   textAlign: TextAlign.center,
 
                                   style: TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.w800,
-                                    fontSize: 30,
+                                    fontSize: 40,
                                     fontFamily: 'PLayfairDisplay',
                                   ),
                                 ),
                               ),
                             ],
                           ),
+                          height: 250,
+                          width: 300,
                         ),
-                        flex: 5,
+                        flex: 2,
                       ),
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                          padding: EdgeInsets.fromLTRB(0, 0, 0, 70),
                           child: Container(
                             width: MediaQuery.of(context).size.width*.6,
+                            height: MediaQuery.of(context).size.height*.1,
                             margin: EdgeInsets.all(5),
 
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(30),
                                 border: Border.all(width: 2,color: Colors.black),
-                                color: Colors.black),
+                              color: Color(0xFF1d66db),
+                            ),
                             child: MaterialButton(
                               onPressed: () {
                                 Navigator.pushNamed(context, '/login');
                               },
                               child: Text(
-                                "Sign in",
+                                "Log in",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontFamily: 'PlayfairDisplay',
