@@ -1,4 +1,5 @@
 import 'package:emerance/Screens/LandingPageBeta.dart';
+import 'package:emerance/Screens/UserProfilePage.dart';
 import 'package:flutter/material.dart';
 
 import 'Screens/LandingPage.dart';
@@ -14,8 +15,9 @@ void main() {
         '/1': (context) =>   LandingPageBeta(),
         '/login' : (context) => LoginPage(),
         '/signup' : (context) =>   SignUpPage(),
+        '/userProfile' : (context) => UserProfilePage(),
       },
-      initialRoute: '/signup',
+      initialRoute: '/userProfile',
     )
   );
 }
